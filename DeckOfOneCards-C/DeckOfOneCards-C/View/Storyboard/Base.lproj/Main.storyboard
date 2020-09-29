@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardViewController" customModule="DeckOfOneCards_C" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qnS-6N-LIW">
+                                <rect key="frame" x="87" y="289.5" width="240" height="239.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(card suit)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1Y-eK-AdC">
+                                <rect key="frame" x="162.5" y="161" width="89" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWz-yI-SVe">
+                                <rect key="frame" x="100" y="587" width="214" height="30"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <state key="normal" title="Draw">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.072387332530000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="drawCardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cKH-Gn-nAU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BWz-yI-SVe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="1V9-81-1Zz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BWz-yI-SVe" secondAttribute="bottom" constant="245" id="64Z-Xh-pZw"/>
+                            <constraint firstItem="g1Y-eK-AdC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="117" id="8RC-Kd-gMB"/>
+                            <constraint firstItem="qnS-6N-LIW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="LEe-Qw-stE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BWz-yI-SVe" secondAttribute="trailing" constant="100" id="N7M-Nt-38H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qnS-6N-LIW" secondAttribute="trailing" constant="87" id="Rx6-Sr-3RM"/>
+                            <constraint firstItem="BWz-yI-SVe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="UJC-Vx-axA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BWz-yI-SVe" secondAttribute="bottom" constant="245" id="W0Z-IE-YMh"/>
+                            <constraint firstItem="g1Y-eK-AdC" firstAttribute="centerX" secondItem="qnS-6N-LIW" secondAttribute="centerX" id="i4n-lL-eHd"/>
+                            <constraint firstItem="qnS-6N-LIW" firstAttribute="top" secondItem="g1Y-eK-AdC" secondAttribute="bottom" constant="104.5" id="n8p-Yx-QlE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BWz-yI-SVe" secondAttribute="trailing" constant="100" id="wI0-HO-tQq"/>
+                            <constraint firstItem="BWz-yI-SVe" firstAttribute="top" secondItem="qnS-6N-LIW" secondAttribute="bottom" constant="58" id="wZi-71-7gR"/>
+                            <constraint firstItem="BWz-yI-SVe" firstAttribute="top" secondItem="qnS-6N-LIW" secondAttribute="bottom" constant="58" id="xAz-dB-7uW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="qnS-6N-LIW" id="yf9-Xp-TLK"/>
+                        <outlet property="drawCardButton" destination="BWz-yI-SVe" id="VyP-h0-Zrg"/>
+                        <outlet property="suitLabel" destination="g1Y-eK-AdC" id="b7a-Ex-u94"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="67"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
